@@ -1,0 +1,130 @@
+/* Стили для меню аккаунта */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #121212;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(33, 160, 56, 0.1); /* Зеленый Сбербанка */
+    padding: 2rem;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #2a2a2a;
+}
+
+.userContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+    width: 100%;
+    text-align: center;
+}
+
+.avatarSection {
+    position: relative;
+}
+
+.avatar {
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border: 3px solid #21A038; /* Зеленый Сбербанка */
+    box-shadow: 0 4px 10px rgba(33, 160, 56, 0.3); /* Зеленый Сбербанка */
+    transition: all 0.3s ease;
+}
+
+.avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(33, 160, 56, 0.4); /* Зеленый Сбербанка */
+}
+
+.placeholderAvatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    background-color: #2a2a2a;
+    color: #888;
+    border: 3px dashed #21A038; /* Зеленый Сбербанка */
+}
+
+.nameSection {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.userName {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.4;
+    color: #fff;
+    margin: 0;
+}
+
+.userEmail {
+    font-size: 0.9rem;
+    color: #888;
+    margin: 0;
+    word-break: break-all;
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background-color: #1e1e1e;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.menuButton:hover {
+    background-color: #21A038; /* Зеленый Сбербанка */
+    transform: translateY(-2px);
+    border-color: #21A038; /* Зеленый Сбербанка */
+}
+
+.signOutButton {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #2a2a2a;
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: auto;
+        padding: 0.5rem;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .userContainer > :not(.avatarSection),
+    .menuItems {
+        display: none;
+    }
+
+    .avatar,
+    .placeholderAvatar {
+        width: 3rem !important;
+        height: 3rem !important;
+        border-width: 2px !important;
+    }
+}
